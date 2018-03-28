@@ -1,0 +1,15 @@
+.sidebar-wrapper {
+    background-color: white !important;
+}
+
+li a p {
+    color: #274152;
+}
+
+li a p:hover {
+    color: red !important;
+}
+
+li a p:click {
+    color: red !important;
+}

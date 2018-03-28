@@ -1,0 +1,86 @@
+.signup_image {
+    margin: 0px;
+    background-color: #274152;
+    background-position: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: fixed;
+    
+    height: 735px;
+    margin: 0px !important;
+  }
+
+  .logo {
+      margin-left: 200px;
+      margin-top: 200px;
+
+  }
+
+  .logo2 {
+    color: white;
+    font-size: 18px;
+      margin-left: 170px;
+  }
+
+  .logo3 {
+      margin-left: 50px;
+  }
+
+  .sign_form {
+      margin-top: 50px;
+  }
+
+  .reg {
+      font-size: 16px;
+  }
+
+  .reg2 {
+      font-weight: bold;
+  }
+
+  .form_details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form_details > * {
+      width: 100%;
+  }
+
+  #reds {
+      color: red;
+  }
+
+  .reds {
+      background-color: pink;
+      color: black;
+      padding: 20px;
+      border-radius: 5px;
+      font-weight: bolder;
+    
+  }
+
+  .form-control {
+    padding: 0px !important;
+    height: 40px !important;
+  }
+
+.trader {
+    left: 740px;
+}
+
+.mat-raised-button {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    width: 100%;
+    border-radius: 1px !important;
+}
+
+button.mat-raised-button.mat-primary {
+    letter-spacing: 1px !important;
+    border-radius: 1px !important;
+}
+
+a {
+    text-decoration: none;
+}

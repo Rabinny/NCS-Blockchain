@@ -1,0 +1,111 @@
+<div class="wrapper">
+        <div class="sidebar" data-background-color="green" data-active-color="danger">
+            <ocosidebar-cmp></ocosidebar-cmp>
+        </div>
+        <div class="main-panel">
+            <oconavbar-cmp></oconavbar-cmp>
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        
+                        <div class="col-md-12">
+                            
+                            <div class="card">
+                                    <div class="header">
+                                            <h4 class="title">Search Register</h4>
+                                        </div>
+                                        <br>
+                                <div class="content">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label for="bank" class="form-control">Date</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div><input type="date" class="form-control border-input" placeholder="Enter Month"></div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                                <div class="col-md-4">
+                                                    <label for="branch" class="form-control">Register Type</label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div><select name="" id="" class="form-control border-input">
+                                                        <option value="1" disabled>Select Type of Register</option>
+                                                        <option value=""  *ngFor="let register of registers">{{register}}</option>
+                                                    </select></div>
+                                                </div>
+                                            </div>
+                                    <br>
+                                    <div class="row">
+                                            <div class="col-md-4">
+                                                <label for="account" class="form-control">Factory Number</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div><input type="text" class="form-control border-input" placeholder="Enter Excise Factory Number"></div>
+                                            </div>
+                                        </div>
+                                    
+                                    <br>
+                                    <div class="text-center">
+                                            <button class="btn btn-sm btn-success">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="header">
+                                    <h4 class="title">Manage Registers</h4>
+                                    <div class="category">Manage factory registers.</div>
+                                    <br>
+                                    <div class="content">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <label>Show</label>
+                                                <span>
+                                                <select class="form-control">
+                                                    <option>Today</option>
+                                                    <option>This Week</option>
+                                                    <option>This Month</option>
+                                                    <option>This Year</option>
+                                                </select>
+                                                </span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>Filter By</label>
+                                                <span>
+                                                    <select class="form-control">
+                                                        <option>Finished Goods</option>
+                                                        <option>Defective Goods</option>
+                                                        <option>Raw Material</option>
+                                                        <option>Operational</option>
+                                                    </select>
+                                                </span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>Filter By Status</label>
+                                                <span>
+                                                    <select class="form-control">
+                                                        <option>Reviewed</option>
+                                                        <option>Not Reviewed</option>
+                                                    </select>
+                                                </span>
+                                            </div>
+                                            </div>
+                                        <br /><br />
+                                        <table class="table table-striped">
+                                            <tr><th>Total Finished Goods</th><th>Total Raw Material</th><th>Total Defective Goods</th><th>Total Operational Goods</th><th>Status</th><th></th><th></th><th></th></tr>
+                                            <tr><td>4000</td><td>14</td><td>223</td><td>11</td><td><span class="badge badge-danger">Not Reviewed</span></td><td><a href="">View Uploads</a></td><td><a href="">Mark Reviewed</a></td><td><a href="">Reject</a></td></tr>
+                                            <tr><td>2000</td><td>55</td><td>211</td><td>2</td><td><span class="badge badge-success">Reviewed</span></td><td><a href="">View Uploads</a></td><td></td><td></td></tr>
+                                        </table> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>

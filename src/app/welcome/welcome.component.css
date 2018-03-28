@@ -1,0 +1,107 @@
+.welcome {
+    background: 
+    linear-gradient(to right,
+        rgba(0,42,62, 0.7),   
+        rgba(0,42,62, 0.6)
+      ), 
+    /* top, transparent red */ 
+   
+    /* bottom, image */
+    url(/../../assets/img/customs.jpg);
+    background-position: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   
+    
+    height: 400px;
+    margin: 0px !important;
+  }
+
+  .welcome2 {
+      background-color: green;
+      margin-left: -110px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 70%;
+    transform: skewX(-30deg);
+
+    height: 400px;
+
+  }
+
+  .display-text {
+    font-family: 'Merriweather-Light',Georgia,serif;
+    font-size: 37px;
+    line-height: 54px;
+    z-index: 30;
+    color: white;
+    transform: none !important;
+    margin-top: 50px;
+}
+
+.logo{
+padding:0px !important;
+width: 230px !important;
+}
+
+.mvlogo {
+    margin-top: -270px !important;
+    margin-left: 50px !important;
+}
+
+.login {
+    background-color: #F4F1F4;
+    height: 330px;
+    top:72px !important;
+
+}
+
+.signin {
+    height: 330px;
+    top:72px !important;
+
+}
+
+.ssign {
+    padding: 0px !important;
+}
+
+#excise {
+    font-size: 45px;
+}
+
+#exciseDiff3 {
+    font-size: 45px;
+    color: green;
+}
+
+.excise {
+    text-align: center;
+    padding-top:50px;
+}
+
+#excise2 {
+    color: #222222;
+    font-size: 25px;
+    font-weight: bold;
+}
+#excise3 {
+    font-size: 19px;
+    text-align: center;
+    font-family: 'Courgette', cursive;
+}
+
+#exciseDiff {
+    color: green;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+#exciseDiff2 {
+    color: green;
+    font-size: 22px;
+    text-align: center;
+    font-family: 'Courgette', cursive;
+}

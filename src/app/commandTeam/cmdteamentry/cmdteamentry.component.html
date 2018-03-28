@@ -1,0 +1,58 @@
+<div class="wrapper">
+        <div class="sidebar" data-background-color="green">
+            <cmdteamsidebar-cmp></cmdteamsidebar-cmp>
+        </div>
+        <div class="main-panel">
+            <cmdteamnavbar-cmp></cmdteamnavbar-cmp>
+            <div class="content">
+                    <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-1 col-md-1"></div>
+                                <div class="col-lg-10 col-md-10">
+                                    <div class="card">
+                                        <div class="header">
+                                            <h4 class="title">Entry of Premise and Revised Entry of Premise Requests</h4>
+                                        </div>
+                                        <div class="content">
+                                                <div class="content  table-responsive table-full-width">
+                                                        <table class="table table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Form Reference</th>
+                                                                    <th class="text-center">Submission Date</th>
+                                                                    <th>Company Name</th>
+                                                                    <th>Entry Type</th>
+                                                                    <th>Action</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr *ngFor="let row of form41 ">
+                                                                    <td>{{row.FORMREF}}</td>
+                                                                    <td class="text-center">{{row.DATERECEIVED | date}}</td>
+                                                                    <td>{{row.CNAME}}</td>
+                                                                    <td>{{row.COMMENTS}}</td>
+                                                                    <td><button class="btn btn-sm btn-warning btn-icon" (click)="review(row)">Review</button></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div *ngIf="noForm">{{formMessage}}</div>
+                                                    </div>
+                                        </div>
+                                    </div>
+                    
+                                    
+                                </div>
+                                <div class="col-lg-1 col-md-1"></div>
+
+                               
+                    
+                    
+                            </div>
+                        </div>
+                    
+            </div>
+            
+        </div>
+    </div>
+    
+   

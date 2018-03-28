@@ -1,0 +1,165 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 signup_image">
+        <div class="logo">
+          <img src="../../assets/img/logo.png" style="height:300px; width:250px;" alt="">
+        </div>
+        <br>
+        <div class="logo2">
+              <p>Have an account? Click the button below</p>
+        </div>
+        <div class="">
+          <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-3 logo3">
+              <a class="btn btn-lg btn-success" routerLink="/signin">LOG IN PAGE</a> 
+            </div>
+            <div class="col-xs-6"></div>
+          </div>
+        </div>
+        <br>
+
+    </div>
+    <div class="col-md-6 trader">
+      <div class="container-fluid">
+      <div class="row sign_form">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="text-center text-muted reg">
+                <p class="reg"> EXCISE TRADER'S REGISTRATION PAGE </p>
+              </div>
+              <br><br>
+              <div class="reg2">
+                Please fill the form below with accurate information to register an excise trader's account.
+              </div>
+              <br>
+              <div class="form_details">
+                <form [formGroup]='signupForm'>
+                  <br>
+                  <div>
+                      <label for="firstName">First Name: <span id="reds">*</span></label>
+                      <div>
+                          <input type="text" placeholder="Enter First Name" class="form-control" formControlName="firstName">
+                      </div>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="lastName">Last Name: <span id="reds">*</span></label>
+                        <div>
+                            <input type="text" placeholder="Enter Last Name" class="form-control" formControlName="lastName">
+                        </div>
+                      </div>
+                    <br>
+                  <div>
+                    <label for="name">Company Name: <span id="reds">*</span></label>
+                    <div>
+                        <input type="text" placeholder="Enter Company Name" class="form-control" formControlName="CompanyName">
+                    </div>
+                  </div>
+                  <br>
+                  <div>
+                    <label for="name">Username: <span id="reds">*</span></label>
+                    <div>
+                        <input type="text" placeholder="Enter Username for Excise Account" class="form-control" formControlName="username">
+                    </div>
+                  </div>
+                  <br>
+
+                  <div>
+                      <label for="rcNumber">RC Number: <span id="reds">*</span></label>
+                      <div>
+                          <input type="text" placeholder="Enter RC Number" class="form-control" formControlName="rcNumber">
+                      </div>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="tinNumber">TIN Number: <span id="reds">*</span></label>
+                        <div>
+                            <input type="text" placeholder="Enter TIN Number" class="form-control" formControlName="tinNumber">
+                        </div>
+                      </div>
+                      <br>
+                      <div>
+                          <label for="email">Email Address: <span id="reds">*</span></label>
+                          <div>
+                              <input type="email" placeholder="Enter Email Address" class="form-control" formControlName="email">
+                          </div>
+                        </div>
+                        <br>
+                      <div>
+                          <label for="email">Phone Number: <span id="reds">*</span></label>
+                          <div>
+                              <input type="text" placeholder="Enter Phone Number" class="form-control" formControlName="phone">
+                          </div>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="email">Location: <span id="reds">*</span></label>
+                            <div>
+                                <input type="text" placeholder="Enter Full Address" class="form-control" formControlName="location">
+                            </div>
+                          </div>
+                        <div>
+                          <label for="command">NCS Command: <span id="reds">*</span></label>
+                          <div>
+                              <select name="command" id="" formControlName="command" class="form-control">
+                                <option value="" disabled>Choose closest NCS Command</option>
+                                <option value="{{command.commandid}}" *ngFor="let command of commands">{{command.commandname}}</option>
+                              </select>
+                          </div>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="businessPurpose">Business Description: <span id="reds">*</span></label>
+                            <div>
+                                <textarea cols="10" rows="3" placeholder="Description of Business" class="form-control" formControlName="businessDescription"></textarea>
+                            </div>
+                          </div>
+                        <div>
+                            <label for="businessPurpose">Business Purpose: <span id="reds">*</span></label>
+                            <div>
+                                <textarea cols="10" rows="3" placeholder="State Purposes of Business" class="form-control" formControlName="businessPurpose"></textarea>
+                            </div>
+                          </div>
+                          <br>
+                        <div>
+                            <label for="password">Password: <span id="reds">*</span></label>
+                            <div>
+                                <input type="password" placeholder="Enter Password" class="form-control" formControlName="password">
+                            </div>
+                          </div>
+                          <br>
+                          <div>
+                              <label for="repeat">Repeat Password: <span id="reds">*</span></label>
+                              <div>
+                                  <input type="password" placeholder="Repeat Password" class="form-control" formControlName="repeat">
+                              </div>
+                            </div>
+                            <br>
+                            <div>
+                              <div class="row">
+                                <div class="col-md-6">
+                                    <a class="btn btn-lg btn-primary" (click)='signup()'>Register</a> 
+                                </div>
+                                <div class="col-md-6"></div>
+                              </div>
+                            </div>
+
+                            <br>
+                            <div class="row">
+                              <div class="reds alert alert-danger text-center" *ngIf='isExist'>{{registerMessage}}</div>
+                            </div>
+                            <br>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-2"></div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

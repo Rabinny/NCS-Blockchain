@@ -1,0 +1,106 @@
+<div class="wrapper">
+        <div class="sidebar" data-background-color="green" data-active-color="danger">
+            <cmdteamsidebar-cmp></cmdteamsidebar-cmp>
+        </div>
+        <div class="main-panel">
+            <cmdteamnavbar-cmp></cmdteamnavbar-cmp>
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="header">
+                                    <h4 class="title text-center">{{companyName}}</h4>
+                                </div>
+                                <br><br>
+                                <div class="content">
+                                <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="alert alert-info">Application Type</div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="bold">{{entryType}}</div>
+                                        </div>
+                                    </div>
+                                    <br><br>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="alert alert-info">Form Reference</div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="bold">{{formRef}}</div>
+                                        </div>
+                                    </div>
+                                    <br><br>
+                                    <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="alert alert-info">Factory Address</div>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div class="bold">{{registeredAddress}}</div>
+                                            </div>
+                                        </div>
+                                        <br><br>
+                                        <div class="row">
+                                                <div class="col-md-5">
+                                                    <div class="alert alert-info">Business Description</div>
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <div class="bold">{{businessDescription}}</div>
+                                                </div>
+                                            </div>
+                                        <br><br>
+                                        <div class="row">
+                                                <div class="col-md-5">
+                                                    <div class="alert alert-info">Business Purpose</div>
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <div class="bold">{{businessPurpose}}</div>
+                                                </div>
+                                            </div>
+                                        <br><br>
+                                        <div class="row">
+                                                <div class="col-md-5">
+                                                    <div class="alert alert-info">Submission Date</div>
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <div class="bold">{{submissionDate | date}}</div>
+                                                </div>
+                                            </div>
+                                            <br><br>
+                                            <div class="row">
+                                                    <div class="col-md-5">
+                                                        <div class="alert alert-info">Status</div>
+                                                    </div>
+                                                    <div class="col-md-7">
+                                                        <div class="bold">{{entryStatus}}</div>
+                                                    </div>
+                                                </div>
+                                            <br><br>
+                                            <div class="row">
+                                                <div class="col-md-1"></div>
+                                                <div class="col-md-10 alert alert-warning">
+                                                    <span><input type="checkbox"></span> I hereby confirm that the details supplied by {{companyName}} are correct and worthy of processing for {{entryType}} request.
+                                                </div>
+                                                <div class="col-md-1"></div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="text-center">
+                                                    <button class="btn-lg btn btn-success">Process Request</button>
+                                                </div>
+                                            </div>
+                                            <br><br>
+                                            
+                                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>

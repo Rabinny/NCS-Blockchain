@@ -1,0 +1,232 @@
+<div class="wrapper">
+    <div class="sidebar" data-background-color="green" data-active-color="danger">
+        <sidebar-cmp></sidebar-cmp>
+    </div>
+
+    <div class="main-panel">
+        <navbar-cmp></navbar-cmp>
+        <div class="content">
+            <div class="container-fluid">
+                    <div class="container card alert alert-danger text-center reds" *ngIf= "isVerified">
+                            <strong class="reds">Warning: </strong> Your Account is yet to be verified. You may not be able to perform some operations
+                            pending when your account is approved.
+                        </div>
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card" style="background-color:#02A057 !important; color:white; font-weight:bolder;">
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col-xs-5">
+                                        <div class="icon-big icon-warning text-center">
+                                            <i class="ti-archive"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <div class="numbers">
+                                            <p>Completed Requests</p>
+                                            0
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card" style="background-color:#063281 !important; color:white; font-weight:bolder;">
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col-xs-5">
+                                        <div class="icon-big icon-success text-center">
+                                            <i class="ti-slice"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <div class="numbers">
+                                            <p>Pending Requests</p>
+                                            0
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card" style="background-color:#1B8EE9 !important; color:white; font-weight:bolder;">
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col-xs-5">
+                                        <div class="icon-big icon-danger text-center">
+                                            <i class="ti-receipt"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <div class="numbers">
+                                            <p>Licenced Factories</p>
+                                            0
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card" style="background-color:#B3028C !important; color:white; font-weight:bolder;">
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col-xs-5">
+                                        <div class="icon-big icon-info text-center">
+                                            <i class="ti-ticket"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <div class="numbers">
+                                            <p>Licence Approvals</p>
+                                            0
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+        
+                
+                <div class="row">
+        
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Company Details</h4>
+                                <p class="category">Last Edited Profile</p>
+                            </div>
+                            <div class="content">
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-5">
+                                        <div>
+                                        <span class="icon-info"> <i class="ti-arrow-circle-right"></i></span>  Company Name: {{companyName}}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div>
+                                                <span class="icon-info"> <i class="ti-arrow-circle-right"></i></span> RC Number: {{rcNumber}}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="row">
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-5">
+                                            <div>
+                                                    <span class="icon-info"> <i class="ti-arrow-circle-right"></i></span>   Location: {{location}}
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div>
+                                                    <span class="icon-info"> <i class="ti-arrow-circle-right"></i></span>  TIN Number: {{tinNumber}}
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1"></div>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-5">
+                                                <div>
+                                                        <span class="icon-info"> <i class="ti-arrow-circle-right"></i></span>   E-mail Address: {{email}}
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div>
+                                                        <span class="icon-info"> <i class="ti-arrow-circle-right"></i></span>   Phone Number: {{phoneNumber}}
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1"></div>
+                                        </div>
+                                        <br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Transaction History</h4>
+                                <p class="category">Account Summary</p>
+                            </div>
+                            <div class="content">
+                                <div>
+                                    <div class="row">
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-9">
+                                            <br>
+                                            <br>
+                                            <div>
+                                                    <i class="fa fa-circle text-info"></i> Processing fee:
+                                            </div>
+                                            <br><br><br>
+                                            <div>
+                                                    <i class="fa fa-circle text-danger"></i> Excise Duties:
+                                            </div>
+                                            <br><br><br>
+                                            <div>
+                                                    <i class="fa fa-circle text-warning"></i> Licence fee:
+                                            </div>
+                                            <br><br><br>
+                                            <div>
+                                                    <i class="fa fa-circle text-success"></i> Bank Guarantees:
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2"></div>
+                                    </div>           
+                                </div>
+                                <br>                                                    
+                                
+                                <div class="footer">
+                                    <div class="chart-legend"></div>
+                                    <hr>
+                                    <div class="stats">
+                                        <i class="ti-timer"></i> BlockChain-powered transactions
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card ">
+                            <div class="header">
+                                <h4 class="title">2018 Excise Duties</h4>
+                                <p class="category">Products and Taxes levied</p>
+                            </div>
+                            <div class="content">
+                                <div id="chartActivity" class="ct-chart"></div>
+        
+                                <div class="footer">
+                                    <div class="chart-legend">
+                                        <i class="fa fa-circle text-info"></i> Total Number of Products
+                                        <i class="fa fa-circle text-warning"></i> Taxes levied
+                                    </div>
+                                    <hr>
+                                    <div class="stats">
+                                        <i class="ti-check"></i> Data information certified by BlockChain Technology
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        
+    </div>
+</div>

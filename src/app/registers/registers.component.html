@@ -1,0 +1,137 @@
+<div class="wrapper">
+    <div class="sidebar" data-background-color="green" data-active-color="danger">
+        <ocosidebar-cmp></ocosidebar-cmp>
+    </div>
+    <div class="main-panel">
+        <oconavbar-cmp></oconavbar-cmp>
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Upload Registers</h4>
+                                <div class="category">Please choose the register type and upload document</div>
+                                <br>
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="" class="form-control">
+                                                Type of Register
+                                            </label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div>
+                                                <select name="" id="" class="form-control border-input">
+                                                    <option value="1" disabled>Select Type of Register</option>
+                                                    <option value="" *ngFor="let register of registers">{{register}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br><br>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="" class="form-control">
+                                                Year of Register
+                                            </label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div>
+                                                <select name="" id="" class="form-control border-input">
+                                                    <option value="1" disabled>Year of Register</option>
+                                                    <option value="">2017</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br><br>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="" class="form-control">
+                                                Upload Documents
+                                            </label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div>
+                                                <input type="file" class="form-control border-input" multiple>
+                                                <div class="text-muted category">You may choose multiple files</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--<br><br>-->
+                                    <!--<div class="row">
+                                        <div class="col-md-4">
+                                            <label for="" class="form-control">
+                                                Officer's Comments
+                                            </label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div>
+                                                <textarea name="" id="" cols="30" rows="10" class="form-control border-input"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>-->
+                                    <br><br>
+                                    <div class="text-center">
+                                        <button class="btn btn-lg btn-success">Submit</button>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Search Register</h4>
+                            </div>
+                            <br>
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="bank" class="form-control">Date</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div><input type="date" class="form-control border-input" placeholder="Enter Month"></div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="branch" class="form-control">Register Type</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div>
+                                            <select name="" id="" class="form-control border-input">
+                                                <option value="1" disabled>Select Type of Register</option>
+                                                <option value="" *ngFor="let register of registers">{{register}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="account" class="form-control">Factory Number</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div><input type="text" class="form-control border-input" placeholder="Enter Excise Factory Number"></div>
+                                    </div>
+                                </div>
+
+                                <br>
+                                <div class="text-center">
+                                    <button class="btn btn-sm btn-success">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

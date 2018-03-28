@@ -1,0 +1,161 @@
+<div class="wrapper">
+        <div class="sidebar" data-background-color="green" data-active-color="danger">
+            <sidebar-cmp></sidebar-cmp>
+        </div>
+        <div class="main-panel">
+            <navbar-cmp></navbar-cmp>
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row" *ngIf = "formDisplay">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="card">
+                                <br>
+                                <div class="header">
+                                    <h4 class="title text-center">{{companyName}}</h4>
+                                </div>
+                                <br><br>
+                                <div class="content">
+                                <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="alert alert-info">Application Type</div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="bold">{{entryType}}</div>
+                                        </div>
+                                    </div>
+                                    <br><br>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="alert alert-info">Form Reference</div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="bold">{{formRef}}</div>
+                                        </div>
+                                    </div>
+                                    <br><br>
+                                    <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="alert alert-info">Factory Address</div>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div class="bold">{{registeredAddress}}</div>
+                                            </div>
+                                        </div>
+                                        <br><br>
+                                        <div class="row">
+                                                <div class="col-md-5">
+                                                    <div class="alert alert-info">Business Description</div>
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <div class="bold">{{businessDescription}}</div>
+                                                </div>
+                                            </div>
+                                        <br><br>
+                                        <div class="row">
+                                                <div class="col-md-5">
+                                                    <div class="alert alert-info">Business Purpose</div>
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <div class="bold">{{businessPurpose}}</div>
+                                                </div>
+                                            </div>
+                                        <br><br>
+                                        <div class="row">
+                                                <div class="col-md-5">
+                                                    <div class="alert alert-info">Submission Date</div>
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <div class="bold">{{submissionDate | date}}</div>
+                                                </div>
+                                            </div>
+                                            <br><br>
+                                            <div class="row">
+                                                    <div class="col-md-5">
+                                                        <div class="alert alert-info">Status</div>
+                                                    </div>
+                                                    <div class="col-md-7">
+                                                        <div class="bold">{{entryStatus}}</div>
+                                                    </div>
+                                                </div>
+                                            <br><br>
+                                            
+                                            <div class="row">
+                                                <div class="text-center">
+                                                    <button class="btn-lg btn btn-success" (click) = "processRequest()">Process Request</button> <span>
+                                                    <button class="btn-lg btn btn-danger">Reject Request</button>                                                        
+                                                    </span> 
+                                                </div>
+                                            </div>
+                                            <br><br>
+                                            
+                                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="row" *ngIf="assignOfficer">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="header">
+                                    <h4 class="title">Assign Officer for Factory Inspection</h4>
+                                </div>
+                                <br>
+                                <div class="content">
+                                   <div class="row">
+                                       <div class="col-md-5">
+                                           <div class="alert alert-info">
+                                               Choose Officer:
+                                           </div>
+                                       </div>
+                                       <div class="col-md-7">
+                                            <!--<form [formGroup]='chooseOfficer'>
+                                               <select name="officer" id="" formControlName="selectOfficer" class="form-control border-input">
+                                                   <option value="{{inspectionOfficer.userid}}" *ngFor="let inspectionOfficer of inspectionOfficers">{{inspectionOfficer.firstname}} {{inspectionOfficer.lastname}}</option>
+                                               </select>
+                                           </form>-->
+                                       </div>
+                                   </div> 
+                                   <br>
+                                   <div class="row">
+                                       <div class="col-md-12">
+                                           <div class="text-center">
+                                               <button class="btn btn-success btn-sm" (click) = assignInspectionOfficer()>Assign Officer</button>
+                                           </div>
+                                       </div>
+                                   </div>
+                                </div>
+                                <br><br>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="row" *ngIf= "showResult">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="header">
+                                    
+                                       <h4 class="title"> Officer Successfully Assigned</h4>
+                                   
+
+                                </div>
+                                <div class="content">
+                                    <div class="alert text-center" >
+                                        <img src="../../assets/img/success.png" style="height:250px; width:250px;" alt="Successfully Assigned Officer">
+                                    </div>
+                                    <div class="text-center alert alert-info">
+                                        You have successfully assigned an Officer for Factory Inspection.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
