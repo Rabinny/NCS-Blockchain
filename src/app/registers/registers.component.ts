@@ -12,6 +12,6 @@ export class RegistersComponent implements OnInit {
     public registers:any[];
 
     ngOnInit() {
-     this.registers = ['Raw Material Register', 'Daily Production Schedule', 'Operational Register', 'Finished Goods Register', 'Defective Goods Register']
+     this.registers = ['Sugar Cane', 'Crude Oil']
     }
 }

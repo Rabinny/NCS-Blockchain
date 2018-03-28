@@ -15,7 +15,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class TraderFormComponent  {
 
     formDisplay: boolean = true;
-    assignOfficer: boolean = false
+    assignOfficer: boolean = false;
 
     constructor() { }
 

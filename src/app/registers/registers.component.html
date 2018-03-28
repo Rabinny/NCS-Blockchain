@@ -7,58 +7,46 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-7">
+                    <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Upload Registers</h4>
-                                <div class="category">Please choose the register type and upload document</div>
+                                <h4 class="title">Upload Raw Material Registers</h4>
+                      
                                 <br>
                                 <div class="content">
                                     <div class="row">
                                         <div class="col-md-4">
                                             <label for="" class="form-control">
-                                                Type of Register
+                                                Material Id
                                             </label>
                                         </div>
                                         <div class="col-md-8">
-                                            <div>
+                                            <!--<div>
                                                 <select name="" id="" class="form-control border-input">
                                                     <option value="1" disabled>Select Type of Register</option>
                                                     <option value="" *ngFor="let register of registers">{{register}}</option>
                                                 </select>
-                                            </div>
+                                            </div>-->
+                                            <input type="text" class="form-control border-input" />
+
                                         </div>
                                     </div>
                                     <br><br>
                                     <div class="row">
                                         <div class="col-md-4">
                                             <label for="" class="form-control">
-                                                Year of Register
+                                                Material Name
                                             </label>
                                         </div>
                                         <div class="col-md-8">
                                             <div>
-                                                <select name="" id="" class="form-control border-input">
-                                                    <option value="1" disabled>Year of Register</option>
-                                                    <option value="">2017</option>
-                                                </select>
+                                                <input type="text" class="form-control border-input">
+
                                             </div>
                                         </div>
                                     </div>
-                                    <br><br>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <label for="" class="form-control">
-                                                Upload Documents
-                                            </label>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div>
-                                                <input type="file" class="form-control border-input" multiple>
-                                                <div class="text-muted category">You may choose multiple files</div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                   
+                                   
                                     <!--<br><br>-->
                                     <!--<div class="row">
                                         <div class="col-md-4">
@@ -72,6 +60,97 @@
                                             </div>
                                         </div>
                                     </div>-->
+                                    <br><br>
+                                    <div class="text-center">
+                                        <button class="btn btn-lg btn-success">Submit</button>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Upload Product Registers</h4>
+                                <br>
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="" class="form-control">
+                                                Material
+                                            </label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div>
+                                                <select name="" id="" class="form-control border-input">
+                                                    <option value="1" disabled>Select Type of Material</option>
+                                                    <option value="" *ngFor="let register of registers">{{register}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br><br>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="" class="form-control">
+                                                Product Name
+                                            </label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div>
+                                                <input type="text" class="form-control border-input">
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <br />
+                                    <br />
+                                  
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="" class="form-control">
+                                                Quantity
+                                            </label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div>
+                                                <input type="number" class="form-control border-input">
+
+                                            </div>
+                                        </div>
+                                    </div><br />
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="" class="form-control">
+                                                Reasion
+                                            </label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div>
+                                                <input type="text" class="form-control border-input">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br><br>
+                                    <!--<br><br>-->
+                                    <!--<div class="row">
+                        <div class="col-md-4">
+                            <label for="" class="form-control">
+                                Officer's Comments
+                            </label>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                <textarea name="" id="" cols="30" rows="10" class="form-control border-input"></textarea>
+                            </div>
+                        </div>
+                    </div>-->
                                     <br><br>
                                     <div class="text-center">
                                         <button class="btn btn-lg btn-success">Submit</button>
