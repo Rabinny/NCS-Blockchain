@@ -72,13 +72,28 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Upload Product Registers</h4>
+                                <h4 class="title">Upload Registry</h4>
                                 <br>
                                 <div class="content">
                                 <form [formGroup]="productRegisterForm" (ngSubmit)="uploadProductRegister(productRegisterForm.value)" novalidate>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="" class="form-control">
+                                                Registry Type
+                                            </label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div>
+                                                <select name="" id="" class="form-control border-input">
+                                                    <option value="1" disabled>Select Type of Register</option>
+                                                    <option value="" *ngFor="let register of registers">{{registry}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="row">
                                         <div class="col-md-4">
                                             <label for="" class="form-control">

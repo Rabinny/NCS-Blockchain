@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 
 export class RegistersComponent implements OnInit {
     public registers:any[];
+    public registry: any[]; 
     rawMaterialsRegisterForm;
     productRegisterForm;
 
@@ -38,7 +39,11 @@ export class RegistersComponent implements OnInit {
     	console.log(data);
     }
 
+    
+
+
     ngOnInit() {
-     this.registers = ['Sugar Cane', 'Crude Oil']
+        this.registers = ['Sugar Cane', 'Crude Oil']
+        this.registry = ['Product Registry', 'Defective Registry']
     }
 }
