@@ -9,9 +9,11 @@ import { Component,OnInit } from '@angular/core';
 })
 
 export class RegistersComponent implements OnInit {
-    public registers:any[];
+    public registers: any[];
+    public registry: any[]; 
 
     ngOnInit() {
-     this.registers = ['Sugar Cane', 'Crude Oil']
+        this.registers = ['Sugar Cane', 'Crude Oil']
+        this.registry = ['Product Registry', 'Defective Registry']
     }
 }
