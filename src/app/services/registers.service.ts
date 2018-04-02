@@ -5,13 +5,25 @@ import { Constants } from '../utils/costants';
 
 @Injectable()
 export class RegistersService {
-
+    
     constructor(private http:Http) {}
 
 
-     saveMaterialRegister(data) {
-        let url = Constants.GET_A_USER_BY_EMAIL;
-        return this.http.get(url);
+    saveMaterialRegister(info) {
+     	console.log('service data');
+     	console.log(info);
+        let url = 'http://130.162.69.18/bcsgw/rest/v1/transaction/invocation';
+        let data = {
+        "channel":"testorderer",
+        "chaincode":"exciseprocess",
+        "method":"addToMateriallRegistery",
+        "args":['material2364', 'sugar', ],
+        "chaincodeVer":"v1"
+     };
+     let jsonData = JSON.stringify(data);
+     return this.http.post(url, jsonData )
+
+        //return this.http.get(url);
     }
 
      saveProductRegister(data) {

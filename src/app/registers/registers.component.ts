@@ -1,12 +1,15 @@
 import { Component,OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { RegistersService } from '../services/registers.service';
 
 
 @Component({
     moduleId: module.id,
     selector: 'registers-cmp',
-    templateUrl: 'registers.component.html'
+    templateUrl: 'registers.component.html',
+    providers:[RegistersService]
+
 })
 
 export class RegistersComponent implements OnInit {
@@ -15,7 +18,7 @@ export class RegistersComponent implements OnInit {
     rawMaterialsRegisterForm;
     productRegisterForm;
 
-    constructor(private formBuilder:FormBuilder, private router:Router){
+    constructor(private formBuilder:FormBuilder, private router:Router, private registersSrv: RegistersService ){
     	this.rawMaterialsRegisterForm = this.formBuilder.group({
         materialID: ['', Validators.compose([Validators.required])],
         name: ['', Validators.compose([Validators.required])],
@@ -33,6 +36,11 @@ export class RegistersComponent implements OnInit {
     uploadRawMaterialsReg(data){
     	console.log(data);
     	console.log('uploading...');
+    	this.registersSrv.saveMaterialRegister(data).subscribe((response) => {
+            console.log(response);
+        }, error =>{
+            console.log(error);
+        })
     }
 
     uploadProductRegister(data){
