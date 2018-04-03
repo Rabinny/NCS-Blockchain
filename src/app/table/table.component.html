@@ -7,8 +7,44 @@
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                      
-                        <div class="col-md-12">
+                        <div class="content">
+                            <div class="container-fluid">
+                                <div class="row" *ngIf="formDisplay">
+                                    <div class="header">
+                                        <h4 class="title">Exercise Duty Invoice</h4>
+                                        <div class="category">Your exercise duty invoice is due for payment.</div>
+                                    </div>
+                                    <div class="content">
+                                        <br />
+                                        <table class="table table-striped">
+                                            <tr>
+                                                <td>
+                                                    <h5>Bill from:</h5>
+                                                    <h6>Nigerian Customs Service</h6>
+                                                    <h6>3 Maitaima Sule Avenue</h6>
+                                                    <h6>Maitama Abuja</h6>
+                                                </td><td></td>
+                                                <td>
+                                                    <h5>Bill to:</h5>
+                                                    <h6>British American Tobacco</h6>
+                                                    <h6>2 Olumegbon Rd,</h6>
+                                                    <h6> Ikoyi, Lagos.</h6>
+                                                </td></tr>
+                                            <br /><br />
+                                            <tr><th>Material Id</th><th>Product</th><th>Quantity</th><th>Duty Rate</th><th>Duty Due</th></tr>
+                                            <tr><td>3333</td><td>Sugar</td><td>222</td><td><del>N</del>20</td><td><del>N</del>4,440</td></tr>
+                                            <br />
+                                            <tr></tr>
+                                            <tr><td><button class="btn btn-primary" (click)="processPayOnline()">Pay Online</button><button class="btn btn-primary">Pay by Bank</button></td></tr>
+                                        </table>
+                                        <br /><br />
+                                        <button class="btn btn-primary" (click)="backToDuty()">Back to Duty</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12" *ngIf="tableDisplay">
                                 <div class="card">
                                     <div class="header">
                                         <h4 class="title">Exercise Duty</h4>
@@ -17,13 +53,58 @@
                                     <br>
                                     <div class="content">
                                         <table class="table table-striped">
-                                            <tr><th>Date of Issue</th><th>Amount Due</th><th>Status</th><th></th><th></th></tr>
-                                            <tr><td>3 Mar 2018</td><td><del>N</del>25,000,000</td><td><span class="badge badge-danger">Not Paid</span></td><td><a href="">View Invoice</a></td><td><a href="">Make Payment</a></td></tr>
-                                            <tr><td>5 Mar 2018</td><td><del>N</del>5,000,000</td><td><span class="badge badge-success">Paid</span></td><td><a href="">View Invoice</a></td><td></td></tr>
+                                            <tr><th>Date Uploaded</th><th>Raw Material</th><th>Product</th><th>Duty Rate</th><th>Amount Due</th><th>Status</th><th></th><th></th></tr>
+  <tr><td>3 Mar 2018</td><td>Sugar Cane</td><td>Sugar</td><td><del>N</del>20</td><td><del>N</del>25,000,000</td><td><span class="badge badge-danger">Not Paid</span></td>
+                                            <td><a href="">View Invoice</a></td><td><button class="btn btn-primary" (click)="processRequest()">Make Payment</button></td></tr>
+                                        
                                         </table> 
                                     </div>
                                 </div>
                             </div>
+                        <div class="card col-md-7 col-md-offset-3" *ngIf="payOnline">
+                         
+                                <div class="header">
+                                    <h4 class="title">BAM Payment</h4>
+                                    <div class="category">Pay your exercise duty online.</div>
+                                </div>
+                                <br>
+                                <div class="content">
+                                   <input class="form-control" placeholder="Card Number"/>
+                                    <select class="form-control">
+                                        <option>Month</option>
+                                        <option>November</option>
+                                        </select>
+                                    <select class="form-control">
+                                        <option>Year</option>
+                                        <option>2019</option>
+                                    </select>
+                                    <input class="form-control" placeholder="CVV" />
+                                    <button (click)="confirmPayment()" class="btn btn-success">Pay</button>
+                                </div>
+                         
+                        </div>
+                        <div class="row" *ngIf="showPayment">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <div class="card">
+                                    <div class="header">
+
+                                        <h4 class="title text-center"> Duty Paid Successfully.</h4>
+
+
+                                    </div>
+                                    <div class="content">
+                                        <div class="alert text-center">
+                                            <img src="../../assets/img/success.png" style="height:250px; width:250px;" alt="Successfully Paid Duty">
+                                        </div>
+                                        <div class="text-center alert alert-info">
+                                            You have successfully cleared your duty.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
                        
                     </div>
                 </div>

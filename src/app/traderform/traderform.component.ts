@@ -20,8 +20,8 @@ export class TraderFormComponent  {
     constructor() { }
 
     processRequest() {
-        this.formDisplay = false;
-        this.assignOfficer = true;
+        this.formDisplay = true;
+       
     }
 
 }

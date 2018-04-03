@@ -9,7 +9,6 @@ import { RegistersService } from '../services/registers.service';
     selector: 'registers-cmp',
     templateUrl: 'registers.component.html',
     providers:[RegistersService]
-
 })
 
 export class RegistersComponent implements OnInit {

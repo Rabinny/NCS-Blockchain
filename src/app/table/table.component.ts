@@ -14,6 +14,30 @@ declare interface TableData {
 export class TableComponent implements OnInit{
     public tableData1: TableData;
     public tableData2: TableData;
+
+    formDisplay: boolean = false;
+    tableDisplay: boolean = true;
+    payOnline: boolean = false;
+    showPayment: boolean = false;
+
+    processRequest() {
+        this.formDisplay = true;
+        this.tableDisplay = false;
+    }
+
+    backToDuty() {
+        this.formDisplay = false;
+        this.tableDisplay = true;
+    }
+    processPayOnline() {
+        this.payOnline = true;
+        this.formDisplay = false;
+    }
+    confirmPayment() {
+        this.showPayment = true;
+        this.payOnline = false;
+    }
+
     ngOnInit(){
         this.tableData1 = {
             headerRow: [ 'ID', 'Name', 'Country', 'City', 'Salary'],
